@@ -1,0 +1,1 @@
+C:/lscc/radiant/2025.1/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.lab1_qm work.on_board_leds work.seven_segment_display work.testbench -quiet -auto_acc_if_foreign -work work +acc -L iCE40UP -allow_unnamed -o _opt2 -id 1-bcf4d4b02237-68b2a052-216-36a0 +__design_bin_path+C:/Users/peppe/OneDrive/Desktop/lab1 +__betafsm

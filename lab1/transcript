@@ -1,0 +1,56 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project lab1_sim_qm
+# Compile of lab1_testbench_qm.sv was successful.
+vsim -gui work.testbench -L iCE40UP -voptargs=+acc
+# vsim -gui work.testbench -L iCE40UP -voptargs="+acc" 
+# Start time: 12:39:56 on Aug 30,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.lab1_qm(fast)
+# Loading work.on_board_leds(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.seven_segment_display(fast)
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/reset
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/led
+add wave -position end  sim:/testbench/seg
+add wave -position end  sim:/testbench/led_expected
+add wave -position end  sim:/testbench/seg_expected
+add wave -position end  sim:/testbench/vector_num
+add wave -position end  sim:/testbench/errors
+add wave -position end  sim:/testbench/test_vectors
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: qmiyamoto  Hostname: HDMZ0R3  ProcessID: 23988
+#           Attempting to use alternate WLF file "./wlftdr5nbx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdr5nbx
+run 1000000
+#         16 tests completed with          0 errors
+# ** Note: $stop    : C:/Users/peppe/OneDrive/Desktop/lab1/lab1_testbench_qm.sv(68)
+#    Time: 175 ns  Iteration: 1  Instance: /testbench
+# Break in Module testbench at C:/Users/peppe/OneDrive/Desktop/lab1/lab1_testbench_qm.sv line 68
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.testbench(fast)
+# Loading work.lab1_qm(fast)
+# Loading work.on_board_leds(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.seven_segment_display(fast)
+run 10000

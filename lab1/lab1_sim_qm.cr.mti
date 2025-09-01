@@ -1,0 +1,43 @@
+C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/lab1_testbench_qm.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/lab1_testbench_qm.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} C:/Users/peppe/OneDrive/Desktop/lab1/lab1_testbench_qm.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/peppe/OneDrive/Desktop/lab1/lab1_testbench_qm.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} C:/Users/peppe/OneDrive/Desktop/lab1/seven_segment_display.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/peppe/OneDrive/Desktop/lab1/seven_segment_display.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module seven_segment_display
+
+Top level modules:
+	seven_segment_display
+
+} {} {}} C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/lab1_qm.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/lab1_qm.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module lab1_qm
+
+Top level modules:
+	lab1_qm
+
+} {} {}} C:/Users/peppe/OneDrive/Desktop/lab1/lab1_qm.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/peppe/OneDrive/Desktop/lab1/lab1_qm.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module lab1_qm
+
+Top level modules:
+	lab1_qm
+
+} {} {}} C:/Users/peppe/OneDrive/Desktop/lab1/on_board_leds.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/peppe/OneDrive/Desktop/lab1/on_board_leds.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module on_board_leds
+
+Top level modules:
+	on_board_leds
+
+} {} {}}
