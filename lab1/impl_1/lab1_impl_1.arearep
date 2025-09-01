@@ -1,0 +1,33 @@
+----------------------------------------------------------------------
+Report for cell lab1_qm.TECH
+Register bits:  25 of 5280 (0.473%)
+I/O cells:      15
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        13          100.0
+                            FD1P3XZ        25          100.0
+                              HSOSC         1          100.0
+                                 IB         5          100.0
+                               LUT4        41          100.0
+                                 OB        10          100.0
+SUB MODULES
+                      on_board_leds         1
+              seven_segment_display         1
+                              TOTAL        97
+----------------------------------------------------------------------
+Report for cell seven_segment_display.v1
+Instance Path : sev_seg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         8           19.5
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell on_board_leds.v1
+Instance Path : leds
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        13          100.0
+                            FD1P3XZ        25          100.0
+                              HSOSC         1          100.0
+                               LUT4        32           78.0
+                              TOTAL        71
