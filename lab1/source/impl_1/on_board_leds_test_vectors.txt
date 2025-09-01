@@ -1,0 +1,25 @@
+// Name:  Quinn Miyamoto
+// Email: qmiyamoto@g.hmc.edu
+// Date:  August 29, 2025
+
+// Purpose: To provide accurate LED results.
+
+// switches_leds
+// 3210_210
+
+1111_000
+1110_001
+1101_001
+1100_000
+1011_000
+1010_001
+1001_001
+1000_000
+0111_000
+0110_001
+0101_001
+0100_000
+0011_010
+0010_011
+0001_011
+0000_010

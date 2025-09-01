@@ -7,24 +7,25 @@ Device:  iCE40UP5K
 Package: SG48
 Performance Grade:  High-Performance_1.2V
 
-Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
-Mapped on: Sat Aug 30 15:17:52 2025
+Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
+Mapped on: Sun Aug 31 23:05:49 2025
 
 Design Information
 ------------------
 
-Command line:   map -pdc
-     C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/lab1_pins_qm.pdc -i
-     lab1_impl_1_syn.udb -o lab1_impl_1_map.udb -mp lab1_impl_1.mrp -hierrpt
-     -gui -msgset C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/promote.xml
+Command line:   map -pdc C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring
+     2026/ENGR 155/e155-labs/lab1/lab1_pins_qm.pdc -i lab1_impl_1_syn.udb -o
+     lab1_impl_1_map.udb -mp lab1_impl_1.mrp -hierrpt -gui -msgset
+     C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR
+     155/e155-labs/lab1/promote.xml
 
 Design Summary
 --------------
 
    Number of slice registers:  25 out of  5280 (<1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            68 out of  5280 (1%)
-      Number of logic LUT4s:              42
+   Number of LUT4s:            45 out of  5280 (1%)
+      Number of logic LUT4s:              19
       Number of ripple logic:             13 (26 LUT4s)
    Number of IO sites used:   15 out of 39 (38%)
       Number of IO sites used for general PIO: 15
@@ -48,18 +49,17 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net leds.int_osc: 25 loads, 25 rising, 0 falling (Driver: Pin
-     leds.hf_osc.osc_inst/CLKHF)
+      Net leds.int_osc: 14 loads, 14 rising, 0 falling (Driver: Pin
+     leds.hf_osc/CLKHF)
    Number of Clock Enables:  1
       Net seg_pad[0].vcc: 1 loads, 0 SLICEs
-   Number of LSRs:  1
-      Net n161: 25 loads, 25 SLICEs
+   Number of LSRs:  2
+      Net n149: 1 loads, 1 SLICEs
+      Net leds.n150: 13 loads, 13 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net leds.n257: 25 loads
-      Net n161: 25 loads
+      Net leds.n150: 13 loads
       Net s_c_0: 8 loads
       Net s_c_1: 8 loads
-      Net s_c_2: 8 loads
 
                                     Page 1
 
@@ -69,11 +69,13 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
+      Net s_c_2: 8 loads
       Net s_c_3: 8 loads
       Net seg_pad[0].vcc: 3 loads
       Net leds.counter[11]: 2 loads
       Net leds.counter[12]: 2 loads
       Net leds.counter[13]: 2 loads
+      Net leds.counter[14]: 2 loads
 
 
 
@@ -125,14 +127,16 @@ IO (PIO) Attributes
 | led[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[2]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-
 
                                     Page 2
 
 
 
 
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
 -------------
@@ -143,7 +147,7 @@ OSC Summary
 -----------
 
 OSC 1:                                 Pin/Node Value
-  OSC Instance Name:                            leds/hf_osc.osc_inst
+  OSC Instance Name:                            leds/hf_osc
   Power UP:                            NODE     seg_pad[0].vcc
   Enable Signal:                       NODE     seg_pad[0].vcc
   OSC Output:                          NODE     leds.int_osc
@@ -152,7 +156,7 @@ OSC 1:                                 Pin/Node Value
 ASIC Components
 ---------------
 
-Instance Name: leds/hf_osc.osc_inst
+Instance Name: leds/hf_osc
          Type: HFOSC
 
 Constraint Summary
@@ -164,14 +168,10 @@ Constraint Summary
 Run Time and Memory Usage
 -------------------------
 
-   Total CPU Time: 0 secs
+   Total CPU Time: 1 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 67 MB
-Checksum -- map: 75adba82db247d694c80445eab4b00e33d855b78
-
-
-
-
+Checksum -- map: 4ec1a05afb43d4bba27543dc4271f830e5c1d49b
 
 
 
@@ -204,5 +204,5 @@ Copyright (c) 1995-2001 Lucent
      Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems
      All rights reserved.
-Copyright (c) 2002-2024 Lattice Semiconductor
+Copyright (c) 2002-2025 Lattice Semiconductor
      Corporation,  All rights reserved.

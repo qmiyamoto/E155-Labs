@@ -35,19 +35,20 @@
 
 
 
+
 -drc_cfg 35103300 20
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/impl_1" "C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm"
--ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
--lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/lab1_qm.sv"
-"C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/source/impl_1/seven_segment_display.sv"
-"C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm/source/impl_1/on_board_leds.sv"
+-path "C:/lscc/radiant/2025.1/ispfpga/ice40tp/data" "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab1/impl_1" "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab1" "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab1/source/impl_1"
+-ver "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab1/lab1_qm.sv"
+"C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab1/source/impl_1/seven_segment_display.sv"
+"C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab1/source/impl_1/on_board_leds.sv"
 
 
--path "C:/Users/qmiyamoto/Desktop/E155_QM/lab1_qm"
+-path "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab1"
 -top lab1_qm
 -udb "lab1_impl_1_rtl.udb"
 -output_hdl "lab1_impl_1.vm"

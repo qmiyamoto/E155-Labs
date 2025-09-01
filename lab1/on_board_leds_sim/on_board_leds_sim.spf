@@ -1,0 +1,11 @@
+<RadiantSimulationProject language="1" name="on_board_leds_sim" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
+    <Source include="none" langstandard="System Verilog" path="lab1_qm.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="source/impl_1/seven_segment_display.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="source/impl_1/on_board_leds.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="" path="source/impl_1/on_board_leds_testbench.sv" type="VERILOG" worklib=""/>
+    <SimLib value="pmi_work ovi_ice40up"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <Udo value=""/>
+    <TopModule instance="" language="VERILOG" name="testbench"/>
+</RadiantSimulationProject>

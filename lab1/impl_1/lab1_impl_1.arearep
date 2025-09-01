@@ -6,21 +6,14 @@ I/O cells:      15
                                cell     count   Res Usage(%)
                                CCU2        13          100.0
                             FD1P3XZ        25          100.0
-                              HSOSC         1          100.0
+                         HSOSC_CORE         1          100.0
                                  IB         5          100.0
-                               LUT4        41          100.0
+                               LUT4        18          100.0
                                  OB        10          100.0
 SUB MODULES
                       on_board_leds         1
               seven_segment_display         1
-                              TOTAL        97
-----------------------------------------------------------------------
-Report for cell seven_segment_display.v1
-Instance Path : sev_seg
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         8           19.5
-                              TOTAL         8
+                              TOTAL        74
 ----------------------------------------------------------------------
 Report for cell on_board_leds.v1
 Instance Path : leds
@@ -28,6 +21,13 @@ Instance Path : leds
                                cell     count   Res Usage(%)
                                 FA2        13          100.0
                             FD1P3XZ        25          100.0
-                              HSOSC         1          100.0
-                               LUT4        32           78.0
-                              TOTAL        71
+                         HSOSC_CORE         1          100.0
+                               LUT4         9           50.0
+                              TOTAL        48
+----------------------------------------------------------------------
+Report for cell seven_segment_display.v1
+Instance Path : sev_seg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         8           44.4
+                              TOTAL         8
