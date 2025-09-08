@@ -1,0 +1,15 @@
+C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module leds_sum
+
+Top level modules:
+	leds_sum
+
+} {} {}}

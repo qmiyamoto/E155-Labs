@@ -1,0 +1,150 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/peppe/OneDrive/Desktop/lab2/lab2_qm_sim
+vlab2_qm
+Z2 2C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/seven_segment_display.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/time_multiplexer.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm_testbench.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1757281525
+!i10b 1
+!s100 VU>1TDzla9Jz[[JPBoU3H2
+IB?bh1oAC3>32jzIc^og_@1
+S1
+R1
+w1757222864
+8C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm.sv
+FC:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm.sv
+!i122 0
+L0 9 20
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.2;79
+r1
+!s85 0
+31
+Z7 !s108 1757281525.000000
+Z8 !s107 C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm_testbench.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/time_multiplexer.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/seven_segment_display.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm.sv|
+Z9 !s90 -reportprogress|300|-L|work|-sv|+noacc+pmi_work.*|+noacc+ovi_ice40up.*|-L|pmi_work|-L|ovi_ice40up|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/seven_segment_display.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/time_multiplexer.sv|C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm_testbench.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-writesessionid|+qrun.out/top_dus|-csession=incr|
+!i113 0
+Z10 o-L work -sv +noacc+pmi_work.* +noacc+ovi_ice40up.* -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vleds_sum
+R2
+R3
+R4
+!i10b 1
+!s100 m:ak[6Lhl;EU_9;??9fhT2
+I:g2o2dfM_[TeR1c:iTPIB0
+S1
+R1
+w1757218320
+8C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv
+FC:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv
+!i122 0
+L0 10 6
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+Tqrun_opt
+!s110 1757281526
+VPEZY5A^oE3VbQKOcODMR`1
+04 9 4 work testbench fast 0
+R0
+!s12f OEM25U4 
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-suppress vopt-7033 -L work +acc +noacc+pmi_work.* +noacc+ovi_ice40up.* -L pmi_work -L ovi_ice40up -work qrun.out/work
+R11
+nqrun_opt
+OL;O;2024.2;79
+vseven_segment_display
+R2
+R3
+R4
+!i10b 1
+!s100 d9DB;7d;[`oALYn6f_bTP0
+I^af9dzNa<DAMW5UGFN:DC0
+S1
+R1
+w1757197210
+8C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/seven_segment_display.sv
+FC:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/seven_segment_display.sv
+!i122 0
+L0 9 28
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vtestbench
+R2
+R3
+R4
+!i10b 1
+!s100 AT^H8H:X<T5Smn=lc`dDa0
+Ibbe3mK:7GXfMWlO6=V?al3
+S1
+R1
+w1757281471
+8C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm_testbench.sv
+FC:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm_testbench.sv
+!i122 0
+L0 11 56
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vtime_multiplexer
+R2
+R3
+R4
+!i10b 1
+!s100 8ab0E96JNeCiXGdi2DBXm2
+I@llfPX_kJLfkBDAfbaAC@3
+S1
+R1
+w1757278835
+8C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/time_multiplexer.sv
+FC:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/time_multiplexer.sv
+!i122 0
+L0 9 33
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11

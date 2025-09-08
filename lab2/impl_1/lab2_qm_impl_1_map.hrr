@@ -1,0 +1,38 @@
+---------------------------------------------------
+Report for cell lab2_qm
+   Instance path: lab2_qm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         78        100.0
+                               LUTGATE	         52        100.0
+                                LUTCCU	         26        100.0
+                                 IOBUF	         23        100.0
+                                PFUREG	         25        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                              leds_sum	          1         9.0
+                 seven_segment_display	          1         9.0
+                      time_multiplexer	          1        75.6
+---------------------------------------------------
+Report for cell time_multiplexer
+   Instance path: lab2_qm/time_mux
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         59        75.6
+                               LUTGATE	         33        63.5
+                                LUTCCU	         26        100.0
+                                PFUREG	         25        100.0
+---------------------------------------------------
+Report for cell leds_sum
+   Instance path: lab2_qm/sum
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         9.0
+                               LUTGATE	          7        13.5
+---------------------------------------------------
+Report for cell seven_segment_display
+   Instance path: lab2_qm/sev_seg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         9.0
+                               LUTGATE	          7        13.5

@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+Report for cell lab2_qm.TECH
+Register bits:  25 of 5280 (0.473%)
+I/O cells:      23
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        13          100.0
+                            FD1P3XZ        25          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         9          100.0
+                               LUT4        51          100.0
+                                 OB        14          100.0
+SUB MODULES
+                           leds_sum         1
+              seven_segment_display         1
+                   time_multiplexer         1
+                              TOTAL       116
+----------------------------------------------------------------------
+Report for cell time_multiplexer.v1
+Instance Path : time_mux
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        13          100.0
+                            FD1P3XZ        25          100.0
+                               LUT4        33           64.7
+                              TOTAL        71
+----------------------------------------------------------------------
+Report for cell leds_sum.v1
+Instance Path : sum
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           13.7
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell seven_segment_display.v1
+Instance Path : sev_seg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           13.7
+                              TOTAL         7

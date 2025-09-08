@@ -1,0 +1,1876 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2025.1.0.39.0
+
+Sun Sep  7 16:33:01 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt lab2_qm_impl_1.twr lab2_qm_impl_1.udb -gui -msgset C:/Users/peppe/OneDrive/Desktop/lab2/promote.xml
+
+-----------------------------------------
+Design:          lab2_qm
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+**Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  Timing Overview
+        1.1  SDC Constraints
+        1.2  Constraint Coverage
+        1.3  Overall Summary
+        1.4  Unconstrained Report
+        1.5  Combinational Loop
+    2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+        2.1  Clock Summary
+        2.2  Endpoint slacks
+        2.3  Detailed Report
+    3  Hold at Speed Grade m Corner at -40 Degrees
+        3.1  Endpoint slacks
+        3.2  Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  Timing Overview
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_clock -name {internal_oscillator} -period 20.8333 [get_pins {hf_osc/CLKHF }] 
+
+1.2  Constraint Coverage
+---------------------------
+Constraint Coverage: 61.0294%
+
+
+1.3  Overall Summary
+---------------------------
+ Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees     Timing Errors: 0 endpoints;  Total Negative Slack: 0.000 ns 
+ Hold at Speed Grade m Corner at -40 Degrees                          Timing Errors: 0 endpoints;  Total Negative Slack: 0.000 ns 
+
+1.4  Unconstrained Report
+===========================
+
+1.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+--------------------------------------------------
+There is no start point satisfying reporting criteria
+
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+         Listing 10 End Points          |           Type           
+-------------------------------------------------------------------
+{time_mux/counter_19__i23/SR   time_mux/counter_19__i22/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i21/SR   time_mux/counter_19__i20/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i19/SR   time_mux/counter_19__i18/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i17/SR   time_mux/counter_19__i16/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i15/SR   time_mux/counter_19__i14/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i13/SR   time_mux/counter_19__i12/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i11/SR   time_mux/counter_19__i10/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i9/SR   time_mux/counter_19__i8/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i7/SR   time_mux/counter_19__i6/SR}                           
+                                        |           No arrival time
+{time_mux/counter_19__i5/SR   time_mux/counter_19__i4/SR}                           
+                                        |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                        14
+                                        |                          
+-------------------------------------------------------------------
+
+1.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 10 Start or End Points     |           Type           
+-------------------------------------------------------------------
+switch[0]                               |                     input
+switch[1]                               |                     input
+switch[2]                               |                     input
+switch[3]                               |                     input
+switch[4]                               |                     input
+switch[5]                               |                     input
+switch[6]                               |                     input
+switch[7]                               |                     input
+reset                                   |                     input
+transistor[0]                           |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                        23
+                                        |                          
+-------------------------------------------------------------------
+
+Nets without clock definition
+Define a clock on a top level port or a generated clock on a clock divider pin associated with this net(s).
+--------------------------------------------------
+There is no instance satisfying reporting criteria
+
+
+
+1.5  Combinational Loop
+========================
+None
+
+===============================================================
+2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+===============================================================
+
+2.1  Clock Summary
+=======================
+
+2.1.1 Clock "internal_oscillator"
+=======================
+create_clock -name {internal_oscillator} -period 20.8333 [get_pins {hf_osc/CLKHF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+       Clock internal_oscillator        |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From internal_oscillator               |             Target |          20.833 ns |         48.000 MHz 
+                                        | Actual (all paths) |          20.792 ns |         48.095 MHz 
+hf_osc/CLKHF (MPW)                      |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
+2.2  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+time_mux/counter_19__i24/D               |    5.369 ns 
+time_mux/counter_19__i23/D               |    6.201 ns 
+time_mux/counter_19__i22/D               |    6.478 ns 
+time_mux/counter_19__i19/D               |    6.714 ns 
+time_mux/counter_19__i21/D               |    6.755 ns 
+time_mux/counter_19__i20/D               |    7.032 ns 
+time_mux/counter_19__i18/D               |    7.586 ns 
+time_mux/counter_19__i17/D               |    7.863 ns 
+time_mux/counter_19__i16/D               |    8.140 ns 
+time_mux/counter_19__i7/D                |    8.251 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
+
+2.3  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i24/D  (SLICE_R16C9D)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 26
+Delay Ratio      : 42.7% (route), 57.3% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 5.369 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.000                 14.517  2       
+time_mux/counter_19_add_4_17/CI1->time_mux/counter_19_add_4_17/CO1
+                                          SLICE_R15C9A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+time_mux/n418                                                NET DELAY               0.000                 14.794  2       
+time_mux/counter_19_add_4_19/CI0->time_mux/counter_19_add_4_19/CO0
+                                          SLICE_R15C9B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+time_mux/n902                                                NET DELAY               0.000                 15.071  2       
+time_mux/counter_19_add_4_19/CI1->time_mux/counter_19_add_4_19/CO1
+                                          SLICE_R15C9B       CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+time_mux/n420                                                NET DELAY               0.000                 15.348  2       
+time_mux/counter_19_add_4_21/CI0->time_mux/counter_19_add_4_21/CO0
+                                          SLICE_R15C9C       CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+time_mux/n905                                                NET DELAY               0.000                 15.625  2       
+time_mux/counter_19_add_4_21/CI1->time_mux/counter_19_add_4_21/CO1
+                                          SLICE_R15C9C       CIN1_TO_COUT1_DELAY     0.277                 15.902  2       
+time_mux/n422                                                NET DELAY               0.000                 15.902  2       
+time_mux/counter_19_add_4_23/CI0->time_mux/counter_19_add_4_23/CO0
+                                          SLICE_R15C9D       CIN0_TO_COUT0_DELAY     0.277                 16.179  2       
+time_mux/n908                                                NET DELAY               0.000                 16.179  2       
+time_mux/counter_19_add_4_23/CI1->time_mux/counter_19_add_4_23/CO1
+                                          SLICE_R15C9D       CIN1_TO_COUT1_DELAY     0.277                 16.456  2       
+time_mux/n424                                                NET DELAY               1.216                 17.672  2       
+time_mux/counter_19_add_4_25/D0->time_mux/counter_19_add_4_25/S0
+                                          SLICE_R15C10A      D0_TO_F0_DELAY          0.449                 18.121  1       
+time_mux/n101[23]                                            NET DELAY               2.168                 20.289  1       
+time_mux/i293_2_lut/A->time_mux/i293_2_lut/Z
+                                          SLICE_R16C9D       D1_TO_F1_DELAY          0.476                 20.765  1       
+time_mux/counter_23__N_1[23]                                 NET DELAY               0.000                 20.765  1       
+time_mux/counter_19__i24/D                                   ENDPOINT                0.000                 20.765  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+time_mux/counter_19__i24/CK                                  CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(20.764)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        5.369  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i23/D  (SLICE_R14C9D)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 25
+Delay Ratio      : 41.3% (route), 58.7% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 6.201 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.000                 14.517  2       
+time_mux/counter_19_add_4_17/CI1->time_mux/counter_19_add_4_17/CO1
+                                          SLICE_R15C9A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+time_mux/n418                                                NET DELAY               0.000                 14.794  2       
+time_mux/counter_19_add_4_19/CI0->time_mux/counter_19_add_4_19/CO0
+                                          SLICE_R15C9B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+time_mux/n902                                                NET DELAY               0.000                 15.071  2       
+time_mux/counter_19_add_4_19/CI1->time_mux/counter_19_add_4_19/CO1
+                                          SLICE_R15C9B       CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+time_mux/n420                                                NET DELAY               0.000                 15.348  2       
+time_mux/counter_19_add_4_21/CI0->time_mux/counter_19_add_4_21/CO0
+                                          SLICE_R15C9C       CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+time_mux/n905                                                NET DELAY               0.000                 15.625  2       
+time_mux/counter_19_add_4_21/CI1->time_mux/counter_19_add_4_21/CO1
+                                          SLICE_R15C9C       CIN1_TO_COUT1_DELAY     0.277                 15.902  2       
+time_mux/n422                                                NET DELAY               0.000                 15.902  2       
+time_mux/counter_19_add_4_23/CI0->time_mux/counter_19_add_4_23/CO0
+                                          SLICE_R15C9D       CIN0_TO_COUT0_DELAY     0.277                 16.179  2       
+time_mux/n908                                                NET DELAY               0.661                 16.840  2       
+time_mux/counter_19_add_4_23/D1->time_mux/counter_19_add_4_23/S1
+                                          SLICE_R15C9D       D1_TO_F1_DELAY          0.449                 17.289  1       
+time_mux/n101[22]                                            NET DELAY               2.168                 19.457  1       
+time_mux/i294_2_lut/A->time_mux/i294_2_lut/Z
+                                          SLICE_R14C9D       D0_TO_F0_DELAY          0.476                 19.933  1       
+time_mux/counter_23__N_1[22]                                 NET DELAY               0.000                 19.933  1       
+time_mux/counter_19__i23/D                                   ENDPOINT                0.000                 19.933  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i23/CK   time_mux/counter_19__i22/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(19.932)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        6.201  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i22/D  (SLICE_R14C9D)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 24
+Delay Ratio      : 42.1% (route), 57.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 6.478 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.000                 14.517  2       
+time_mux/counter_19_add_4_17/CI1->time_mux/counter_19_add_4_17/CO1
+                                          SLICE_R15C9A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+time_mux/n418                                                NET DELAY               0.000                 14.794  2       
+time_mux/counter_19_add_4_19/CI0->time_mux/counter_19_add_4_19/CO0
+                                          SLICE_R15C9B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+time_mux/n902                                                NET DELAY               0.000                 15.071  2       
+time_mux/counter_19_add_4_19/CI1->time_mux/counter_19_add_4_19/CO1
+                                          SLICE_R15C9B       CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+time_mux/n420                                                NET DELAY               0.000                 15.348  2       
+time_mux/counter_19_add_4_21/CI0->time_mux/counter_19_add_4_21/CO0
+                                          SLICE_R15C9C       CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+time_mux/n905                                                NET DELAY               0.000                 15.625  2       
+time_mux/counter_19_add_4_21/CI1->time_mux/counter_19_add_4_21/CO1
+                                          SLICE_R15C9C       CIN1_TO_COUT1_DELAY     0.277                 15.902  2       
+time_mux/n422                                                NET DELAY               0.661                 16.563  2       
+time_mux/counter_19_add_4_23/D0->time_mux/counter_19_add_4_23/S0
+                                          SLICE_R15C9D       D0_TO_F0_DELAY          0.449                 17.012  1       
+time_mux/n101[21]                                            NET DELAY               2.168                 19.180  1       
+time_mux/i295_2_lut/A->time_mux/i295_2_lut/Z
+                                          SLICE_R14C9D       D1_TO_F1_DELAY          0.476                 19.656  1       
+time_mux/counter_23__N_1[21]                                 NET DELAY               0.000                 19.656  1       
+time_mux/counter_19__i22/D                                   ENDPOINT                0.000                 19.656  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i23/CK   time_mux/counter_19__i22/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(19.655)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        6.478  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i19/D  (SLICE_R14C9C)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 21
+Delay Ratio      : 47.1% (route), 52.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 6.714 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.000                 14.517  2       
+time_mux/counter_19_add_4_17/CI1->time_mux/counter_19_add_4_17/CO1
+                                          SLICE_R15C9A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+time_mux/n418                                                NET DELAY               0.000                 14.794  2       
+time_mux/counter_19_add_4_19/CI0->time_mux/counter_19_add_4_19/CO0
+                                          SLICE_R15C9B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+time_mux/n902                                                NET DELAY               0.661                 15.732  2       
+time_mux/counter_19_add_4_19/D1->time_mux/counter_19_add_4_19/S1
+                                          SLICE_R15C9B       D1_TO_F1_DELAY          0.449                 16.181  1       
+time_mux/n101[18]                                            NET DELAY               2.763                 18.944  1       
+time_mux/i298_2_lut/A->time_mux/i298_2_lut/Z
+                                          SLICE_R14C9C       D0_TO_F0_DELAY          0.476                 19.420  1       
+time_mux/counter_23__N_1[18]                                 NET DELAY               0.000                 19.420  1       
+time_mux/counter_19__i19/D                                   ENDPOINT                0.000                 19.420  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i19/CK   time_mux/counter_19__i18/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(19.419)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        6.714  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i21/D  (SLICE_R16C9B)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 23
+Delay Ratio      : 42.9% (route), 57.1% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 6.755 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.000                 14.517  2       
+time_mux/counter_19_add_4_17/CI1->time_mux/counter_19_add_4_17/CO1
+                                          SLICE_R15C9A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+time_mux/n418                                                NET DELAY               0.000                 14.794  2       
+time_mux/counter_19_add_4_19/CI0->time_mux/counter_19_add_4_19/CO0
+                                          SLICE_R15C9B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+time_mux/n902                                                NET DELAY               0.000                 15.071  2       
+time_mux/counter_19_add_4_19/CI1->time_mux/counter_19_add_4_19/CO1
+                                          SLICE_R15C9B       CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+time_mux/n420                                                NET DELAY               0.000                 15.348  2       
+time_mux/counter_19_add_4_21/CI0->time_mux/counter_19_add_4_21/CO0
+                                          SLICE_R15C9C       CIN0_TO_COUT0_DELAY     0.277                 15.625  2       
+time_mux/n905                                                NET DELAY               0.661                 16.286  2       
+time_mux/counter_19_add_4_21/D1->time_mux/counter_19_add_4_21/S1
+                                          SLICE_R15C9C       D1_TO_F1_DELAY          0.449                 16.735  1       
+time_mux/n101[20]                                            NET DELAY               2.168                 18.903  1       
+time_mux/i296_2_lut/A->time_mux/i296_2_lut/Z
+                                          SLICE_R16C9B       D0_TO_F0_DELAY          0.476                 19.379  1       
+time_mux/counter_23__N_1[20]                                 NET DELAY               0.000                 19.379  1       
+time_mux/counter_19__i21/D                                   ENDPOINT                0.000                 19.379  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i21/CK   time_mux/counter_19__i20/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(19.378)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        6.755  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i20/D  (SLICE_R16C9B)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 22
+Delay Ratio      : 43.8% (route), 56.2% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 7.032 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.000                 14.517  2       
+time_mux/counter_19_add_4_17/CI1->time_mux/counter_19_add_4_17/CO1
+                                          SLICE_R15C9A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+time_mux/n418                                                NET DELAY               0.000                 14.794  2       
+time_mux/counter_19_add_4_19/CI0->time_mux/counter_19_add_4_19/CO0
+                                          SLICE_R15C9B       CIN0_TO_COUT0_DELAY     0.277                 15.071  2       
+time_mux/n902                                                NET DELAY               0.000                 15.071  2       
+time_mux/counter_19_add_4_19/CI1->time_mux/counter_19_add_4_19/CO1
+                                          SLICE_R15C9B       CIN1_TO_COUT1_DELAY     0.277                 15.348  2       
+time_mux/n420                                                NET DELAY               0.661                 16.009  2       
+time_mux/counter_19_add_4_21/D0->time_mux/counter_19_add_4_21/S0
+                                          SLICE_R15C9C       D0_TO_F0_DELAY          0.449                 16.458  1       
+time_mux/n101[19]                                            NET DELAY               2.168                 18.626  1       
+time_mux/i297_2_lut/A->time_mux/i297_2_lut/Z
+                                          SLICE_R16C9B       D1_TO_F1_DELAY          0.476                 19.102  1       
+time_mux/counter_23__N_1[19]                                 NET DELAY               0.000                 19.102  1       
+time_mux/counter_19__i20/D                                   ENDPOINT                0.000                 19.102  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i21/CK   time_mux/counter_19__i20/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(19.101)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        7.032  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i18/D  (SLICE_R14C9C)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 20
+Delay Ratio      : 45.7% (route), 54.3% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 7.586 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.000                 14.517  2       
+time_mux/counter_19_add_4_17/CI1->time_mux/counter_19_add_4_17/CO1
+                                          SLICE_R15C9A       CIN1_TO_COUT1_DELAY     0.277                 14.794  2       
+time_mux/n418                                                NET DELAY               0.661                 15.455  2       
+time_mux/counter_19_add_4_19/D0->time_mux/counter_19_add_4_19/S0
+                                          SLICE_R15C9B       D0_TO_F0_DELAY          0.449                 15.904  1       
+time_mux/n101[17]                                            NET DELAY               2.168                 18.072  1       
+time_mux/i299_2_lut/A->time_mux/i299_2_lut/Z
+                                          SLICE_R14C9C       D1_TO_F1_DELAY          0.476                 18.548  1       
+time_mux/counter_23__N_1[17]                                 NET DELAY               0.000                 18.548  1       
+time_mux/counter_19__i18/D                                   ENDPOINT                0.000                 18.548  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i19/CK   time_mux/counter_19__i18/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(18.547)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        7.586  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i17/D  (SLICE_R14C9A)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 19
+Delay Ratio      : 46.7% (route), 53.3% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 7.863 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               0.555                 14.240  2       
+time_mux/counter_19_add_4_17/CI0->time_mux/counter_19_add_4_17/CO0
+                                          SLICE_R15C9A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+time_mux/n899                                                NET DELAY               0.661                 15.178  2       
+time_mux/counter_19_add_4_17/D1->time_mux/counter_19_add_4_17/S1
+                                          SLICE_R15C9A       D1_TO_F1_DELAY          0.449                 15.627  1       
+time_mux/n101[16]                                            NET DELAY               2.168                 17.795  1       
+time_mux/i300_2_lut/A->time_mux/i300_2_lut/Z
+                                          SLICE_R14C9A       D0_TO_F0_DELAY          0.476                 18.271  1       
+time_mux/counter_23__N_1[16]                                 NET DELAY               0.000                 18.271  1       
+time_mux/counter_19__i17/D                                   ENDPOINT                0.000                 18.271  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i17/CK   time_mux/counter_19__i16/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(18.270)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        7.863  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i1/Q  (SLICE_R16C7B)
+Path End         : time_mux/counter_19__i16/D  (SLICE_R14C9A)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 18
+Delay Ratio      : 47.7% (route), 52.3% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 8.140 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                  5.499  15      
+time_mux/counter_19__i1/CK                                   CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+time_mux/counter_19__i1/CK->time_mux/counter_19__i1/Q
+                                          SLICE_R16C7B       CLK_TO_Q0_DELAY         1.388                  6.887  1       
+time_mux/n24                                                 NET DELAY               2.022                  8.909  1       
+time_mux/counter_19_add_4_1/C1->time_mux/counter_19_add_4_1/CO1
+                                          SLICE_R15C7A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+time_mux/n402                                                NET DELAY               0.000                  9.252  2       
+time_mux/counter_19_add_4_3/CI0->time_mux/counter_19_add_4_3/CO0
+                                          SLICE_R15C7B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+time_mux/n878                                                NET DELAY               0.000                  9.529  2       
+time_mux/counter_19_add_4_3/CI1->time_mux/counter_19_add_4_3/CO1
+                                          SLICE_R15C7B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+time_mux/n404                                                NET DELAY               0.000                  9.806  2       
+time_mux/counter_19_add_4_5/CI0->time_mux/counter_19_add_4_5/CO0
+                                          SLICE_R15C7C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+time_mux/n881                                                NET DELAY               0.000                 10.083  2       
+time_mux/counter_19_add_4_5/CI1->time_mux/counter_19_add_4_5/CO1
+                                          SLICE_R15C7C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+time_mux/n406                                                NET DELAY               0.000                 10.360  2       
+time_mux/counter_19_add_4_7/CI0->time_mux/counter_19_add_4_7/CO0
+                                          SLICE_R15C7D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+time_mux/n884                                                NET DELAY               0.000                 10.637  2       
+time_mux/counter_19_add_4_7/CI1->time_mux/counter_19_add_4_7/CO1
+                                          SLICE_R15C7D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+time_mux/n408                                                NET DELAY               0.555                 11.469  2       
+time_mux/counter_19_add_4_9/CI0->time_mux/counter_19_add_4_9/CO0
+                                          SLICE_R15C8A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+time_mux/n887                                                NET DELAY               0.000                 11.746  2       
+time_mux/counter_19_add_4_9/CI1->time_mux/counter_19_add_4_9/CO1
+                                          SLICE_R15C8A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+time_mux/n410                                                NET DELAY               0.000                 12.023  2       
+time_mux/counter_19_add_4_11/CI0->time_mux/counter_19_add_4_11/CO0
+                                          SLICE_R15C8B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+time_mux/n890                                                NET DELAY               0.000                 12.300  2       
+time_mux/counter_19_add_4_11/CI1->time_mux/counter_19_add_4_11/CO1
+                                          SLICE_R15C8B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+time_mux/n412                                                NET DELAY               0.000                 12.577  2       
+time_mux/counter_19_add_4_13/CI0->time_mux/counter_19_add_4_13/CO0
+                                          SLICE_R15C8C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+time_mux/n893                                                NET DELAY               0.000                 12.854  2       
+time_mux/counter_19_add_4_13/CI1->time_mux/counter_19_add_4_13/CO1
+                                          SLICE_R15C8C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+time_mux/n414                                                NET DELAY               0.000                 13.131  2       
+time_mux/counter_19_add_4_15/CI0->time_mux/counter_19_add_4_15/CO0
+                                          SLICE_R15C8D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+time_mux/n896                                                NET DELAY               0.000                 13.408  2       
+time_mux/counter_19_add_4_15/CI1->time_mux/counter_19_add_4_15/CO1
+                                          SLICE_R15C8D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+time_mux/n416                                                NET DELAY               1.216                 14.901  2       
+time_mux/counter_19_add_4_17/D0->time_mux/counter_19_add_4_17/S0
+                                          SLICE_R15C9A       D0_TO_F0_DELAY          0.449                 15.350  1       
+time_mux/n101[15]                                            NET DELAY               2.168                 17.518  1       
+time_mux/i301_2_lut/A->time_mux/i301_2_lut/Z
+                                          SLICE_R14C9A       D1_TO_F1_DELAY          0.476                 17.994  1       
+time_mux/counter_23__N_1[15]                                 NET DELAY               0.000                 17.994  1       
+time_mux/counter_19__i16/D                                   ENDPOINT                0.000                 17.994  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY               5.499                 26.332  15      
+{time_mux/counter_19__i17/CK   time_mux/counter_19__i16/CK}
+                                                             CLOCK PIN               0.000                 26.332  1       
+                                                             Uncertainty          -(0.000)                 26.332  
+                                                             Setup time           -(0.198)                 26.134  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              26.134  
+Arrival Time                                                                                            -(17.993)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                        8.140  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i19/Q  (SLICE_R14C9C)
+Path End         : time_mux/counter_19__i7/D  (SLICE_R16C7C)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 4
+Delay Ratio      : 77.7% (route), 22.3% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 20.833 ns 
+Path Slack       : 8.251 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  15      
+time_mux/internal_oscillator                                 NET DELAY           5.499                  5.499  15      
+{time_mux/counter_19__i19/CK   time_mux/counter_19__i18/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+time_mux/counter_19__i19/CK->time_mux/counter_19__i19/Q
+                                          SLICE_R14C9C       CLK_TO_Q0_DELAY     1.388                  6.887  2       
+time_mux/counter[18]                                         NET DELAY           2.670                  9.557  2       
+time_mux/i5_4_lut/A->time_mux/i5_4_lut/Z  SLICE_R16C9D       B0_TO_F0_DELAY      0.449                 10.006  1       
+time_mux/n12                                                 NET DELAY           3.357                 13.363  1       
+time_mux/i6_4_lut/B->time_mux/i6_4_lut/Z  SLICE_R14C8B       D1_TO_F1_DELAY      0.449                 13.812  25      
+time_mux/n506                                                NET DELAY           3.595                 17.407  25      
+time_mux/i311_2_lut/B->time_mux/i311_2_lut/Z
+                                          SLICE_R16C7C       B0_TO_F0_DELAY      0.476                 17.883  1       
+time_mux/counter_23__N_1[6]                                  NET DELAY           0.000                 17.883  1       
+time_mux/counter_19__i7/D                                    ENDPOINT            0.000                 17.883  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 20.833  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 20.833  15      
+time_mux/internal_oscillator                                 NET DELAY           5.499                 26.332  15      
+{time_mux/counter_19__i7/CK   time_mux/counter_19__i6/CK}
+                                                             CLOCK PIN           0.000                 26.332  1       
+                                                             Uncertainty      -(0.000)                 26.332  
+                                                             Setup time       -(0.198)                 26.134  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          26.134  
+Arrival Time                                                                                        -(17.882)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                    8.251  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
+===============================================================
+3  Hold at Speed Grade m Corner at -40 Degrees
+===============================================================
+
+3.1  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+time_mux/toggle/D                        |    1.973 ns 
+time_mux/counter_19__i11/D               |    3.113 ns 
+time_mux/counter_19__i10/D               |    3.113 ns 
+time_mux/counter_19__i15/D               |    3.113 ns 
+time_mux/counter_19__i17/D               |    3.113 ns 
+time_mux/counter_19__i16/D               |    3.113 ns 
+time_mux/counter_19__i18/D               |    3.113 ns 
+time_mux/counter_19__i21/D               |    3.113 ns 
+time_mux/counter_19__i23/D               |    3.113 ns 
+time_mux/counter_19__i22/D               |    3.113 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+3.2  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : time_mux/toggle/Q  (SLICE_R14C7C)
+Path End         : time_mux/toggle/D  (SLICE_R14C7C)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 2
+Delay Ratio      : 47.7% (route), 52.3% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.973 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+time_mux/toggle/CK                                           CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/toggle/CK->time_mux/toggle/Q     SLICE_R14C7C       CLK_TO_Q1_DELAY  0.779                  3.863  7       
+time_mux/transistor_c_0                                      NET DELAY        0.942                  4.805  7       
+time_mux/i1_2_lut/A->time_mux/i1_2_lut/Z  SLICE_R14C7C       A1_TO_F1_DELAY   0.252                  5.057  1       
+time_mux/n515                                                NET DELAY        0.000                  5.057  1       
+time_mux/toggle/D                                            ENDPOINT         0.000                  5.057  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+time_mux/toggle/CK                                           CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         5.057  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.973  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i11/Q  (SLICE_R16C8A)
+Path End         : time_mux/counter_19__i11/D  (SLICE_R16C8A)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i11/CK   time_mux/counter_19__i10/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i11/CK->time_mux/counter_19__i11/Q
+                                          SLICE_R16C8A       CLK_TO_Q0_DELAY  0.779                  3.863  2       
+time_mux/counter[10]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_11/C1->time_mux/counter_19_add_4_11/S1
+                                          SLICE_R15C8B       C1_TO_F1_DELAY   0.266                  5.011  1       
+time_mux/n101[10]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i306_2_lut/A->time_mux/i306_2_lut/Z
+                                          SLICE_R16C8A       D0_TO_F0_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[10]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i11/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i11/CK   time_mux/counter_19__i10/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i10/Q  (SLICE_R16C8A)
+Path End         : time_mux/counter_19__i10/D  (SLICE_R16C8A)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i11/CK   time_mux/counter_19__i10/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i10/CK->time_mux/counter_19__i10/Q
+                                          SLICE_R16C8A       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+time_mux/counter[9]                                          NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_11/C0->time_mux/counter_19_add_4_11/S0
+                                          SLICE_R15C8B       C0_TO_F0_DELAY   0.266                  5.011  1       
+time_mux/n101[9]                                             NET DELAY        0.934                  5.945  1       
+time_mux/i307_2_lut/A->time_mux/i307_2_lut/Z
+                                          SLICE_R16C8A       D1_TO_F1_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[9]                                  NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i10/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i11/CK   time_mux/counter_19__i10/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i15/Q  (SLICE_R16C8B)
+Path End         : time_mux/counter_19__i15/D  (SLICE_R16C8B)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i15/CK   time_mux/counter_19__i14/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i15/CK->time_mux/counter_19__i15/Q
+                                          SLICE_R16C8B       CLK_TO_Q0_DELAY  0.779                  3.863  2       
+time_mux/counter[14]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_15/C1->time_mux/counter_19_add_4_15/S1
+                                          SLICE_R15C8D       C1_TO_F1_DELAY   0.266                  5.011  1       
+time_mux/n101[14]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i302_2_lut/A->time_mux/i302_2_lut/Z
+                                          SLICE_R16C8B       D0_TO_F0_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[14]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i15/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i15/CK   time_mux/counter_19__i14/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i17/Q  (SLICE_R14C9A)
+Path End         : time_mux/counter_19__i17/D  (SLICE_R14C9A)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i17/CK   time_mux/counter_19__i16/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i17/CK->time_mux/counter_19__i17/Q
+                                          SLICE_R14C9A       CLK_TO_Q0_DELAY  0.779                  3.863  2       
+time_mux/counter[16]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_17/C1->time_mux/counter_19_add_4_17/S1
+                                          SLICE_R15C9A       C1_TO_F1_DELAY   0.266                  5.011  1       
+time_mux/n101[16]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i300_2_lut/A->time_mux/i300_2_lut/Z
+                                          SLICE_R14C9A       D0_TO_F0_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[16]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i17/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i17/CK   time_mux/counter_19__i16/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i16/Q  (SLICE_R14C9A)
+Path End         : time_mux/counter_19__i16/D  (SLICE_R14C9A)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i17/CK   time_mux/counter_19__i16/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i16/CK->time_mux/counter_19__i16/Q
+                                          SLICE_R14C9A       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+time_mux/counter[15]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_17/C0->time_mux/counter_19_add_4_17/S0
+                                          SLICE_R15C9A       C0_TO_F0_DELAY   0.266                  5.011  1       
+time_mux/n101[15]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i301_2_lut/A->time_mux/i301_2_lut/Z
+                                          SLICE_R14C9A       D1_TO_F1_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[15]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i16/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i17/CK   time_mux/counter_19__i16/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i18/Q  (SLICE_R14C9C)
+Path End         : time_mux/counter_19__i18/D  (SLICE_R14C9C)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i19/CK   time_mux/counter_19__i18/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i18/CK->time_mux/counter_19__i18/Q
+                                          SLICE_R14C9C       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+time_mux/counter[17]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_19/C0->time_mux/counter_19_add_4_19/S0
+                                          SLICE_R15C9B       C0_TO_F0_DELAY   0.266                  5.011  1       
+time_mux/n101[17]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i299_2_lut/A->time_mux/i299_2_lut/Z
+                                          SLICE_R14C9C       D1_TO_F1_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[17]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i18/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i19/CK   time_mux/counter_19__i18/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i21/Q  (SLICE_R16C9B)
+Path End         : time_mux/counter_19__i21/D  (SLICE_R16C9B)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i21/CK   time_mux/counter_19__i20/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i21/CK->time_mux/counter_19__i21/Q
+                                          SLICE_R16C9B       CLK_TO_Q0_DELAY  0.779                  3.863  2       
+time_mux/counter[20]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_21/C1->time_mux/counter_19_add_4_21/S1
+                                          SLICE_R15C9C       C1_TO_F1_DELAY   0.266                  5.011  1       
+time_mux/n101[20]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i296_2_lut/A->time_mux/i296_2_lut/Z
+                                          SLICE_R16C9B       D0_TO_F0_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[20]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i21/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i21/CK   time_mux/counter_19__i20/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i23/Q  (SLICE_R14C9D)
+Path End         : time_mux/counter_19__i23/D  (SLICE_R14C9D)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i23/CK   time_mux/counter_19__i22/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i23/CK->time_mux/counter_19__i23/Q
+                                          SLICE_R14C9D       CLK_TO_Q0_DELAY  0.779                  3.863  2       
+time_mux/counter[22]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_23/C1->time_mux/counter_19_add_4_23/S1
+                                          SLICE_R15C9D       C1_TO_F1_DELAY   0.266                  5.011  1       
+time_mux/n101[22]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i294_2_lut/A->time_mux/i294_2_lut/Z
+                                          SLICE_R14C9D       D0_TO_F0_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[22]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i23/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i23/CK   time_mux/counter_19__i22/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : time_mux/counter_19__i22/Q  (SLICE_R14C9D)
+Path End         : time_mux/counter_19__i22/D  (SLICE_R14C9D)
+Source Clock     : internal_oscillator (R)
+Destination Clock: internal_oscillator (R)
+Logic Level      : 3
+Delay Ratio      : 58.3% (route), 41.7% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.113 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i23/CK   time_mux/counter_19__i22/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+time_mux/counter_19__i22/CK->time_mux/counter_19__i22/Q
+                                          SLICE_R14C9D       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+time_mux/counter[21]                                         NET DELAY        0.882                  4.745  2       
+time_mux/counter_19_add_4_23/C0->time_mux/counter_19_add_4_23/S0
+                                          SLICE_R15C9D       C0_TO_F0_DELAY   0.266                  5.011  1       
+time_mux/n101[21]                                            NET DELAY        0.934                  5.945  1       
+time_mux/i295_2_lut/A->time_mux/i295_2_lut/Z
+                                          SLICE_R14C9D       D1_TO_F1_DELAY   0.252                  6.197  1       
+time_mux/counter_23__N_1[21]                                 NET DELAY        0.000                  6.197  1       
+time_mux/counter_19__i22/D                                   ENDPOINT         0.000                  6.197  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  16      
+time_mux/internal_oscillator                                 NET DELAY        3.084                  3.084  16      
+{time_mux/counter_19__i23/CK   time_mux/counter_19__i22/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         6.197  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 3.113  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
