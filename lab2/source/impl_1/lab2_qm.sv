@@ -1,4 +1,4 @@
-	`/*
+/*
 Name:  Quinn Miyamoto
 Email: qmiyamoto@g.hmc.edu
 Date:  September 5, 2025

@@ -3,8 +3,8 @@
 -reflib ovi_ice40up
 
 
-"C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv" 
-"C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum_testbench.sv" 
+"C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/source/impl_1/leds_sum.sv" 
+"C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/source/impl_1/leds_sum_testbench.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*

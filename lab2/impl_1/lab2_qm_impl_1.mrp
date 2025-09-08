@@ -8,14 +8,16 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
-Mapped on: Sun Sep  7 16:32:43 2025
+Mapped on: Mon Sep  8 15:05:49 2025
 
 Design Information
 ------------------
 
-Command line:   map -pdc C:/Users/peppe/OneDrive/Desktop/lab2/lab2_qm.pdc -i
-     lab2_qm_impl_1_syn.udb -o lab2_qm_impl_1_map.udb -mp lab2_qm_impl_1.mrp
-     -hierrpt -gui -msgset C:/Users/peppe/OneDrive/Desktop/lab2/promote.xml
+Command line:   map -pdc C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring
+     2026/ENGR 155/e155-labs/lab2/lab2_qm.pdc -i lab2_qm_impl_1_syn.udb -o
+     lab2_qm_impl_1_map.udb -mp lab2_qm_impl_1.mrp -hierrpt -gui -msgset
+     C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR
+     155/e155-labs/lab2/promote.xml
 
 Design Summary
 --------------
@@ -58,8 +60,6 @@ Design Summary
       Net time_mux.transistor_c_0_N_60: 25 loads
       Net n5[0]: 7 loads
       Net n5[1]: 7 loads
-      Net n5[2]: 7 loads
-      Net n5[3]: 7 loads
 
                                     Page 1
 
@@ -69,6 +69,8 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
+      Net n5[2]: 7 loads
+      Net n5[3]: 7 loads
       Net transistor_c_0: 7 loads
       Net switch_c_0: 4 loads
       Net switch_c_4: 4 loads
@@ -125,8 +127,6 @@ IO (PIO) Attributes
 | led[3]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[4]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| segment[0]          | OUTPUT    |           |       |       |           |
 
                                     Page 2
 
@@ -136,6 +136,8 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[0]          | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | segment[1]          | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -181,11 +183,9 @@ Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 1 secs
-   Total REAL Time: 0 secs
+   Total REAL Time: 2 secs
    Peak Memory Usage: 67 MB
-Checksum -- map: c54e14592a039ef656dbff8a6ed756bde93c4aa4
-
-
+Checksum -- map: 105fc8a7ea2ea908ecb85b4d867ea3904090b643
 
 
 

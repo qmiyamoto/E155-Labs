@@ -36,6 +36,9 @@
         <Source name="leds_sum_sim/leds_sum_sim.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
+        <Source name="seven_segment_display_sim/seven_segment_display_sim.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
         <Source name="time_multiplexer_sim/time_multiplexer_sim.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>

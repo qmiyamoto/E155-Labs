@@ -40,17 +40,16 @@
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/2025.1/ispfpga/ice40tp/data" "C:/Users/peppe/OneDrive/Desktop/lab2/impl_1" "C:/Users/peppe/OneDrive/Desktop/lab2" "C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1"
+-path "C:/lscc/radiant/2025.1/ispfpga/ice40tp/data" "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/impl_1" "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2" "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/source/impl_1"
 -ver "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/lab2_qm.sv"
-"C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/seven_segment_display.sv"
-"C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/leds_sum.sv"
-"C:/Users/peppe/OneDrive/Desktop/lab2/source/impl_1/time_multiplexer.sv"
+-sver "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/source/impl_1/lab2_qm.sv"
+"C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/source/impl_1/seven_segment_display.sv"
+"C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/source/impl_1/leds_sum.sv"
+"C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2/source/impl_1/time_multiplexer.sv"
 
 
--path "C:/Users/peppe/OneDrive/Desktop/lab2"
--top lab2_qm
+-path "C:/Users/peppe/OneDrive/Desktop/Fall 2025 - Spring 2026/ENGR 155/e155-labs/lab2"
 -udb "lab2_qm_impl_1_rtl.udb"
 -output_hdl "lab2_qm_impl_1.vm"
 

@@ -1,11 +1,11 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2025.1.0.39.0
-// Netlist written on Sun Sep  7 14:00:50 2025
+// Netlist written on Mon Sep  8 15:05:36 2025
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
-// file 0 "c:/users/peppe/onedrive/desktop/lab2/source/impl_1/lab2_qm.sv"
-// file 1 "c:/users/peppe/onedrive/desktop/lab2/source/impl_1/leds_sum.sv"
-// file 2 "c:/users/peppe/onedrive/desktop/lab2/source/impl_1/seven_segment_display.sv"
-// file 3 "c:/users/peppe/onedrive/desktop/lab2/source/impl_1/time_multiplexer.sv"
+// file 0 "c:/users/peppe/onedrive/desktop/fall 2025 - spring 2026/engr 155/e155-labs/lab2/source/impl_1/lab2_qm.sv"
+// file 1 "c:/users/peppe/onedrive/desktop/fall 2025 - spring 2026/engr 155/e155-labs/lab2/source/impl_1/leds_sum.sv"
+// file 2 "c:/users/peppe/onedrive/desktop/fall 2025 - spring 2026/engr 155/e155-labs/lab2/source/impl_1/seven_segment_display.sv"
+// file 3 "c:/users/peppe/onedrive/desktop/fall 2025 - spring 2026/engr 155/e155-labs/lab2/source/impl_1/time_multiplexer.sv"
 // file 4 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v"
 // file 5 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd"
 // file 6 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
