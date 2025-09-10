@@ -1,0 +1,35 @@
+----------------------------------------------------------------------
+Report for cell top_two_digits.TECH
+Register bits:  18 of 5280 (0.341%)
+I/O cells:      24
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2         9          100.0
+                            FD1P3XZ        18          100.0
+                                 IB        10          100.0
+                              IOL_B        14          100.0
+                               LUT4        31          100.0
+                                 OB        14          100.0
+SUB MODULES
+              seven_segment_display         1
+sevenseg_time_mux(DIVIDE=32'b01100001101010000)         1
+                              TOTAL        98
+----------------------------------------------------------------------
+Report for cell sevenseg_time_mux(DIVIDE=32'b01100001101010000).v1
+Instance Path : mux2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         9          100.0
+                            FD1P3XZ        18          100.0
+                              IOL_B        14          100.0
+                               LUT4        31          100.0
+SUB MODULES
+              seven_segment_display         1
+                              TOTAL        73
+----------------------------------------------------------------------
+Report for cell seven_segment_display.v1
+Instance Path : mux2.u_dec
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         9           29.0
+                              TOTAL         9

@@ -1,0 +1,36 @@
+---------------------------------------------------
+Report for cell top_two_digits
+   Instance path: top_two_digits
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	      14.00        100.0
+                                  LUT4	         50        100.0
+                               LUTGATE	         32        100.0
+                                LUTCCU	         18        100.0
+                                 IOREG	         14        100.0
+                                 IOBUF	         24        100.0
+                                PFUREG	         18        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+sevenseg_time_mux(DIVIDE=32'b01100001101010000)	          1        98.0
+---------------------------------------------------
+Report for cell sevenseg_time_mux(DIVIDE=32'b01100001101010000)
+   Instance path: top_two_digits/mux2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	      14.00        100.0
+                                  LUT4	         49        98.0
+                               LUTGATE	         31        96.9
+                                LUTCCU	         18        100.0
+                                 IOREG	         14        100.0
+                                PFUREG	         18        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                 seven_segment_display	          1        18.0
+---------------------------------------------------
+Report for cell seven_segment_display
+   Instance path: top_two_digits/mux2/u_dec
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          9        18.0
+                               LUTGATE	          9        28.1
