@@ -20,3 +20,6 @@
 **/Debug/
 *.emSession
 *.jlink
+
+# Questa simulations
+vsim.wlf
