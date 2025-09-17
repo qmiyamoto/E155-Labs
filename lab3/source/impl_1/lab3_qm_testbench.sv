@@ -35,7 +35,8 @@ module testbench();
 			// initializes all column inputs as zero
 			keypad_column = 4'b0; #30;
 			
-			// simulates a button press by turning on Column 1 only when Row 3 is on, then checks if the transistors and 7-segment display outputs are correct
+			// simulates a button press by turning on Column 1 only when Row 0 is on, then "presses" Row 3, Column 1
+			// checks if the transistors and 7-segment display outputs are correct
 			wait(keypad_row[0]); keypad_column[1] = 1'b1; wait(~keypad_row[0]); keypad_column[1] = 1'b0; #12109948;
 			wait(keypad_row[3]); keypad_column[1] = 1'b1; wait(~keypad_row[3]); keypad_column[1] = 1'b0;
 			assert ((transistor === 2'b01) && (segment === 7'b0100100)) else $display("Error! The 7-segment display should be outputting two!");
