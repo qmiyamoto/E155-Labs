@@ -1,0 +1,3 @@
+- Entry: 1
+  Time: Tue Sep 16 23:52:15 2025
+  Command: C:\lscc\radiant\2025.1\questasim\win64\qrun.exe -reportprogress 300 -guimode -clean -f C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/keypad_scanner_and_debouncer_sim/keypad_scanner_and_debouncer_sim.f 

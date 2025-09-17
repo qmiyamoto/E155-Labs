@@ -1,0 +1,274 @@
+
+                         Lattice Mapping Report File
+
+Design:  lab3_qm
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
+Mapped on: Wed Sep 17 03:53:12 2025
+
+Design Information
+------------------
+
+Command line:   map -pdc
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/lab3_qm.pdc -i
+     lab3_qm_impl_1_syn.udb -o lab3_qm_impl_1_map.udb -mp lab3_qm_impl_1.mrp
+     -hierrpt -gui -msgset
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/promote.xml
+
+Design Summary
+--------------
+
+   Number of slice registers:  94 out of  5280 (2%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:           252 out of  5280 (5%)
+      Number of logic LUT4s:             176
+      Number of inserted feedthru LUT4s:  24
+      Number of ripple logic:             26 (52 LUT4s)
+   Number of IO sites used:   18 out of 39 (46%)
+      Number of IO sites used for general PIO: 18
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 18 out of 36 (50%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 18 out of 39 (46%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  2
+      Net internal_oscillator: 2 loads, 2 rising, 0 falling (Driver: Pin
+     hf_osc/CLKHF)
+      Net halved_internal_oscillator: 92 loads, 92 rising, 0 falling (Driver:
+     Pin clock_div.halved_internal_oscillator_c/Q)
+   Number of Clock Enables:  5
+      Net VCC_net: 1 loads, 0 SLICEs
+      Net key_scan_debounce.n742: 24 loads, 24 SLICEs
+      Net key_scan_debounce.n185: 8 loads, 8 SLICEs
+      Net key_scan_debounce.n195: 4 loads, 4 SLICEs
+      Net key_scan_debounce.n186: 8 loads, 8 SLICEs
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+   Number of LSRs:  1
+      Net transistor_c_0_N_190: 94 loads, 94 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net transistor_c_0_N_190: 94 loads
+      Net key_scan_debounce.n185: 43 loads
+      Net key_scan_debounce.n742: 28 loads
+      Net key_scan_debounce.n187: 26 loads
+      Net sev_seg_mux.n2215: 25 loads
+      Net key_scan_debounce.n186: 19 loads
+      Net most_recent_key[2]: 15 loads
+      Net second_most_recent_key[2]: 14 loads
+      Net most_recent_key[7]: 13 loads
+      Net most_recent_key[3]: 12 loads
+
+
+
+
+
+   Number of warnings:  12
+   Number of criticals: 0
+   Number of errors:    0
+
+Design Errors/Criticals/Warnings
+--------------------------------
+
+WARNING <1026001> - map:
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/lab3_qm.pdc (23) : No port
+     matched 'check[0]'.
+WARNING <1026001> - map:
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/lab3_qm.pdc (24) : No port
+     matched 'check[1]'.
+WARNING <1026001> - map:
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/lab3_qm.pdc (25) : No port
+     matched 'check[2]'.
+WARNING <1027013> - map: No port matched 'check[0]'.
+WARNING <1026001> - map:
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/lab3_qm.pdc (23) : Can't
+     resolve object 'check[0]' in constraint 'ldc_set_location -site {28}
+     [get_ports {check[0]}]'.
+WARNING <1027013> - map: No port matched 'check[1]'.
+WARNING <1026001> - map:
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/lab3_qm.pdc (24) : Can't
+     resolve object 'check[1]' in constraint 'ldc_set_location -site {38}
+     [get_ports {check[1]}]'.
+WARNING <1027013> - map: No port matched 'check[2]'.
+WARNING <1026001> - map:
+     C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/lab3_qm.pdc (25) : Can't
+     resolve object 'check[2]' in constraint 'ldc_set_location -site {42}
+     [get_ports {check[2]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {28}
+     [get_ports {check[0]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {38}
+     [get_ports {check[1]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {42}
+     [get_ports {check[2]}]'.
+
+
+
+
+                                    Page 2
+
+
+
+
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_column[0]    | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_column[1]    | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_column[2]    | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_column[3]    | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| reset               | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[0]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[1]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[2]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[3]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[4]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[5]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[6]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| transistor[0]       | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| transistor[1]       | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_row[0]       | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_row[1]       | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_row[2]       | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| keypad_row[3]       | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block i1 was optimized away.
+
+OSC Summary
+-----------
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          NODE     internal_oscillator
+  DIV Setting:                                  00
+
+
+                                    Page 3
+
+
+
+
+
+ASIC Components
+---------------
+
+Instance Name: hf_osc
+         Type: HFOSC
+
+Constraint Summary
+------------------
+
+   Total number of constraints: 26
+   Total number of constraints dropped: 3
+   Dropped constraints are:
+     ldc_set_location -site {28} [get_ports {check[0]}]
+     ldc_set_location -site {38} [get_ports {check[1]}]
+     ldc_set_location -site {42} [get_ports {check[2]}]
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 70 MB
+Checksum -- map: a23765d914d069bad407764167b2c96c11ae63a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2025 Lattice Semiconductor
+     Corporation,  All rights reserved.

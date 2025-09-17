@@ -1,0 +1,78 @@
+----------------------------------------------------------------------
+Report for cell lab3_qm.TECH
+Register bits:  94 of 5280 (1.780%)
+I/O cells:      18
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        26          100.0
+                            FD1P3XZ        94          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         5          100.0
+                               LUT4       175          100.0
+                                 OB        13          100.0
+SUB MODULES
+           key_to_digit_converter_1         1
+        key_to_digit_converter_1_U0         1
+         keypad_column_synchronizer         1
+       keypad_scanner_and_debouncer         1
+               manual_clock_divider         1
+              seven_segment_display         1
+  seven_segment_display_multiplexer         1
+                              TOTAL       321
+----------------------------------------------------------------------
+Report for cell key_to_digit_converter_1.v1
+Instance Path : key_digi_conv_1_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        27           15.4
+                              TOTAL        27
+----------------------------------------------------------------------
+Report for cell seven_segment_display_multiplexer.v1
+Instance Path : sev_seg_mux
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        13           50.0
+                            FD1P3XZ        25           26.6
+                               LUT4        32           18.3
+                              TOTAL        70
+----------------------------------------------------------------------
+Report for cell seven_segment_display.v1
+Instance Path : sev_seg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         6            3.4
+                              TOTAL         6
+----------------------------------------------------------------------
+Report for cell keypad_scanner_and_debouncer.v1
+Instance Path : key_scan_debounce
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        13           50.0
+                            FD1P3XZ        67           71.3
+                               LUT4        66           37.7
+SUB MODULES
+         keypad_column_synchronizer         1
+                              TOTAL       147
+----------------------------------------------------------------------
+Report for cell keypad_column_synchronizer.v1
+Instance Path : key_scan_debounce.key_column_sync
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            8.5
+                               LUT4         1            0.6
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell manual_clock_divider.v1
+Instance Path : clock_div
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         2            2.1
+                               LUT4         2            1.1
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell key_to_digit_converter_1_U0.v1
+Instance Path : key_digi_conv_1_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        29           16.6
+                              TOTAL        29

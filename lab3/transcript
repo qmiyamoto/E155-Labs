@@ -1,0 +1,104 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project work
+# Compile of digit_shifter.sv was successful.
+# Compile of digit_shifter_testbench.sv was successful.
+# Compile of key_determiner_1.sv was successful.
+# Compile of key_determiner_1_testbench.sv was successful.
+# Compile of key_determiner_2.sv was successful.
+# Compile of key_determiner_2_testbench.sv was successful.
+# Compile of key_scanner.sv was successful.
+# Compile of key_scanner_testbench.sv was successful.
+# Compile of keypad_synchronizer.sv was successful.
+# Compile of keypad_synchronizer_testbench.sv was successful.
+# Compile of lab3_qm.sv was successful.
+# Compile of lab3_qm_testbench.sv was successful.
+# Compile of manual_clock_divider.sv was successful.
+# Compile of seven_segment_display.sv was successful.
+# Compile of seven_segment_display_multiplexer.sv was successful.
+# Compile of seven_segment_display_multiplexer_testbench.sv was successful.
+# Compile of seven_segment_display_testbench.sv was successful.
+# Compile of switch_debouncer.sv was successful.
+# Compile of switch_debouncer_2.sv was successful.
+# 19 compiles, 0 failed with no errors.
+vsim -gui work.key_scanner -voptargs=+acc
+# vsim -gui work.key_scanner -voptargs="+acc" 
+# Start time: 03:55:35 on Sep 16,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "key_scanner(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.key_scanner(fast)
+# Loading work.keypad_synchronizer(fast)
+force restart 1'b1
+# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'restart' not found.
+# 
+force reset 1'b1
+run 100
+add wave -position end  sim:/key_scanner/internal_oscillator
+add wave -position end  sim:/key_scanner/reset
+add wave -position end  sim:/key_scanner/keypad_column
+add wave -position end  sim:/key_scanner/keypad_row
+add wave -position end  sim:/key_scanner/most_recent_key
+add wave -position end  sim:/key_scanner/second_most_recent_key
+add wave -position end  sim:/key_scanner/check
+add wave -position end  sim:/key_scanner/counter
+add wave -position end  sim:/key_scanner/next_counter
+add wave -position end  sim:/key_scanner/state
+add wave -position end  sim:/key_scanner/next_state
+add wave -position end  sim:/key_scanner/stabilized_column
+add wave -position end  sim:/key_scanner/stabilized_row
+add wave -position end  sim:/key_scanner/toggled_column
+add wave -position end  sim:/key_scanner/next_toggled_column
+add wave -position end  sim:/key_scanner/toggled_row
+add wave -position end  sim:/key_scanner/current_toggled_row
+add wave -position end  sim:/key_scanner/next_toggled_row
+add wave -position end  sim:/key_scanner/debounced_key
+add wave -position end  sim:/key_scanner/last_key
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.key_scanner(fast)
+# Loading work.keypad_synchronizer(fast)
+force reset 1'b1
+force reset 1'b0
+run 100
+force reset 1'b1
+run 1000
+force internal_oscillator 1'b1
+run 5
+run 5
+force keypad_column[1] 1'b1
+run 5
+run 5
+force internal_oscillator 1'b0
+run 15
+force internal_oscillator 1'b1
+run 15
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.key_scanner(fast)
+# Loading work.keypad_synchronizer(fast)
+# End time: 05:08:39 on Sep 16,2025, Elapsed time: 1:13:04
+# Errors: 0, Warnings: 2

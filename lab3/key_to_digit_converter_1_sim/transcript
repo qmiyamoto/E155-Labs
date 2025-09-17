@@ -1,0 +1,95 @@
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/key_to_digit_converter_1_sim/key_to_digit_converter_1_sim.vdo
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 00:17:13 on Sep 17,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/lab3_qm.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/seven_segment_display.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/seven_segment_display_multiplexer.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/manual_clock_divider.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/key_to_digit_converter_1.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/key_to_digit_converter_2.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/keypad_column_synchronizer.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/keypad_scanner_and_debouncer.sv C:/Users/peppe/OneDrive/Desktop/lab3/lab3_qm/source/impl_1/key_to_digit_converter_1_testbench.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module lab3_qm
+# 
+# -- Compiling module seven_segment_display
+# 
+# -- Compiling module seven_segment_display_multiplexer
+# 
+# -- Compiling module manual_clock_divider
+# 
+# -- Compiling module key_to_digit_converter_1
+# 
+# -- Compiling module key_to_digit_converter_2
+# 
+# -- Compiling module keypad_column_synchronizer
+# 
+# -- Compiling module keypad_scanner_and_debouncer
+# 
+# -- Compiling module testbench
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab3_qm
+# 
+# 	key_to_digit_converter_2
+# 
+# 	testbench
+# 
+# End time: 00:17:14 on Sep 17,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 00:17:14 on Sep 17,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up testbench -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	testbench
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module testbench
+# 
+# -- Loading module key_to_digit_converter_1
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module testbench(fast)
+# 
+# -- Optimizing module key_to_digit_converter_1(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 00:17:14 on Sep 17,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run 100 ns} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
