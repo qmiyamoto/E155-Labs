@@ -7,7 +7,7 @@ Purpose: To assign hexadecimal digits (ranging from 0x0 to 0xF) to specific keys
 */
 
 module key_to_digit_converter_2(input logic  [7:0] key,
-								 output logic [3:0] digit);
+								output logic [3:0] digit);
 	
 	// keypad location decoder
 	always_comb

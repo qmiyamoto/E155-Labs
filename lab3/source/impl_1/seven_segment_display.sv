@@ -7,7 +7,7 @@ Purpose: To replicate hexadecimal digits 0 through F with the seven-segment disp
 */
 
 module seven_segment_display(input logic  [3:0] digit,
-						      output logic [6:0] segment);
+						     output logic [6:0] segment);
 
 	// seven-segment display decoder
 	always_comb

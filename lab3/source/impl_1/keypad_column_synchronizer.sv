@@ -6,10 +6,10 @@ Date:  September 13, 2025
 Purpose: To synchronize the asynchronous keypad column inputs and ultimately mitigate metastability.
 */
 
-module keypad_column_synchronizer(input logic  	  internal_oscillator,
-								   input logic  	  reset,
-								   input logic  [3:0] keypad_column,
-								   output logic [3:0] stabilized_column);
+module keypad_column_synchronizer(input logic  	  	 internal_oscillator,
+								  input logic  	  	 reset,
+								  input logic  [3:0] keypad_column,
+								  output logic [3:0] stabilized_column);
 	
 	logic [3:0] metastable_column;
 	

@@ -8,11 +8,11 @@ Purpose: To both scan the keypad for keys being pressed and subsequently debounc
 */
 
 module keypad_scanner_and_debouncer(input logic        internal_oscillator,
-									 input logic        reset,
-									 input logic  [3:0] keypad_column,
-									 output logic [3:0] keypad_row,
-									 output logic [7:0] most_recent_key,
-									 output logic [7:0] second_most_recent_key);
+									input logic        reset,
+									input logic  [3:0] keypad_column,
+									output logic [3:0] keypad_row,
+									output logic [7:0] most_recent_key,
+									output logic [7:0] second_most_recent_key);
 			
 	typedef enum logic [3:0] {SCAN_ROW_0, SCAN_ROW_1, SCAN_ROW_2, SCAN_ROW_3, DEBOUNCE_PRESS, DECODE_KEY, DEBOUNCE_RELEASE} statetype;
 	statetype state, next_state;
@@ -50,7 +50,7 @@ module keypad_scanner_and_debouncer(input logic        internal_oscillator,
 			// transitions between states and preserves old output values as necessary
 			else
 				begin
-					keypad_row <= next_toggled_row;					// interfaces with the FPGA pins to assert which row(s) should be active
+					keypad_row <= next_toggled_row;						// interfaces with the FPGA pins to assert which row(s) should be active
 					actual_toggled_row <= next_actual_toggled_row;		// accounts for the two-cycle offset that the below synchronizer causes as it pertains to the actual row active during a given state
 					
 					toggled_column <= next_toggled_column;				// preserves the response of the columns to the rows toggling on and off

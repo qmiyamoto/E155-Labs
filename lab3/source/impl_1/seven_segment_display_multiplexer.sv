@@ -7,8 +7,8 @@ Purpose: To alternate transistor activation at a rate of 100 Hz.
 */
 
 module seven_segment_display_multiplexer(input logic        internal_oscillator,
-										  input logic        reset,
-										  output logic [1:0] transistor);
+										 input logic        reset,
+										 output logic [1:0] transistor);
 	
 	logic	  	 toggle;
 	logic [23:0] counter;
