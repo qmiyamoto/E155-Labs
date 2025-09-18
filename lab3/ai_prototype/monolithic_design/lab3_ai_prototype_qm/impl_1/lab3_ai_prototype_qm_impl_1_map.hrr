@@ -1,0 +1,39 @@
+---------------------------------------------------
+Report for cell lab3_ai_prototype_qm
+   Instance path: lab3_ai_prototype_qm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        104        100.0
+                               LUTGATE	         68        100.0
+                                LUTCCU	         36        100.0
+                                 IOBUF	         19        100.0
+                                PFUREG	         59        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                           clk_divider	          1        46.2
+                               hex7seg	          1         6.7
+                        keypad_scanner	          1        24.0
+---------------------------------------------------
+Report for cell clk_divider
+   Instance path: lab3_ai_prototype_qm/clkdiv
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         48        46.2
+                               LUTGATE	         12        17.6
+                                LUTCCU	         36        100.0
+                                PFUREG	         35        59.3
+---------------------------------------------------
+Report for cell hex7seg
+   Instance path: lab3_ai_prototype_qm/decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         6.7
+                               LUTGATE	          7        10.3
+---------------------------------------------------
+Report for cell keypad_scanner
+   Instance path: lab3_ai_prototype_qm/kscan
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         25        24.0
+                               LUTGATE	         25        36.8
+                                PFUREG	         15        25.4

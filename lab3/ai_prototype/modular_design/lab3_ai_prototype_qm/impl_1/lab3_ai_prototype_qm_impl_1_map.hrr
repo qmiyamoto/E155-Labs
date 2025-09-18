@@ -1,0 +1,46 @@
+---------------------------------------------------
+Report for cell lab3_ai_prototype_qm
+   Instance path: lab3_ai_prototype_qm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        136        100.0
+                               LUTGATE	        122        100.0
+                                LUTCCU	         14        100.0
+                                 IOBUF	         19        100.0
+                                PFUREG	         55        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          SevenSegment	          1         4.4
+                       SevenSegment_U0	          1         4.4
+        key_register(DEBOUNCE_COUNT=4)	          1        14.0
+            keypad_scanner(SCAN_DIV=1)	          1        24.3
+---------------------------------------------------
+Report for cell keypad_scanner(SCAN_DIV=1)
+   Instance path: lab3_ai_prototype_qm/scanner
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         33        24.3
+                               LUTGATE	         33        27.0
+                                PFUREG	         16        29.1
+---------------------------------------------------
+Report for cell SevenSegment_U0
+   Instance path: lab3_ai_prototype_qm/decode_left
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          6         4.4
+                               LUTGATE	          6         4.9
+---------------------------------------------------
+Report for cell SevenSegment
+   Instance path: lab3_ai_prototype_qm/decode_right
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          6         4.4
+                               LUTGATE	          6         4.9
+---------------------------------------------------
+Report for cell key_register(DEBOUNCE_COUNT=4)
+   Instance path: lab3_ai_prototype_qm/one_shot
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         19        14.0
+                               LUTGATE	         19        15.6
+                                PFUREG	         16        29.1

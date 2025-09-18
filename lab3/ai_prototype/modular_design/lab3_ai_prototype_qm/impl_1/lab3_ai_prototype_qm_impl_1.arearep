@@ -1,0 +1,47 @@
+----------------------------------------------------------------------
+Report for cell lab3_ai_prototype_qm.TECH
+Register bits:  55 of 5280 (1.042%)
+I/O cells:      19
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2         7          100.0
+                            FD1P3XZ        55          100.0
+                                 IB         6          100.0
+                               LUT4        95          100.0
+                                 OB        13          100.0
+SUB MODULES
+                       SevenSegment         1
+                    SevenSegment_U0         1
+     key_register(DEBOUNCE_COUNT=4)         1
+         keypad_scanner(SCAN_DIV=1)         1
+                              TOTAL       180
+----------------------------------------------------------------------
+Report for cell keypad_scanner(SCAN_DIV=1).v1
+Instance Path : scanner
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        16           29.1
+                               LUT4        34           35.8
+                              TOTAL        50
+----------------------------------------------------------------------
+Report for cell SevenSegment_U0.v1
+Instance Path : decode_left
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         6            6.3
+                              TOTAL         6
+----------------------------------------------------------------------
+Report for cell SevenSegment.v1
+Instance Path : decode_right
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         6            6.3
+                              TOTAL         6
+----------------------------------------------------------------------
+Report for cell key_register(DEBOUNCE_COUNT=4).v1
+Instance Path : one_shot
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        16           29.1
+                               LUT4        21           22.1
+                              TOTAL        37
