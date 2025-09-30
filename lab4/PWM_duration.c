@@ -7,7 +7,7 @@ Purpose: To prolong the notes for a desired duration using TIM15 (timer 15).
 */
 
 
-#include "TIM15_struct.h"
+#include "STM32L432KC_TIM15_struct.h"
 
 
 // initializes the note-prolonging function

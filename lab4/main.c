@@ -10,8 +10,8 @@ Purpose: To play various songs as directed.
 #include "STM32L432KC_RCC.h"
 #include "STM32L432KC_FLASH.h"
 #include "STM32L432KC_GPIO.h"
-#include "TIM15_struct.h"
-#include "TIM16_struct.h"
+#include "STM32L432KC_TIM15_struct.h"
+#include "STM32L432KC_TIM16_struct.h"
 
 
 // Fur Elise notes

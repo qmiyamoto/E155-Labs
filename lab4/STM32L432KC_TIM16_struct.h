@@ -1,4 +1,4 @@
-// TIM16_struct.h
+// STM32L432KC_TIM16_struct.h
 // Header for TIM16 functions
 
 /*

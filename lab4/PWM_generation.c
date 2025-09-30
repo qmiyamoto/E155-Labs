@@ -7,7 +7,7 @@ Purpose: To produce the desired note frequencies by generating a PWM wave with T
 */
 
 
-#include "TIM16_struct.h"
+#include "STM32L432KC_TIM16_struct.h"
 
 
 // initializes the PWM wave-generation function

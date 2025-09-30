@@ -1,4 +1,4 @@
-// TIM15_struct.h
+// STM32L432KC_TIM15_struct.h
 // Header for TIM15 functions
 
 /*
