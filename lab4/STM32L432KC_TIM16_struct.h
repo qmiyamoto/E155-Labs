@@ -46,11 +46,11 @@ typedef struct
   __IO uint32_t BDTR;         /*!< TIM16 breakand dead-time register,           Address offset: 0x44 */
   __IO uint32_t DCR;          /*!< TIM16 DMA control register,                  Address offset: 0x48 */
   __IO uint32_t DMAR;         /*!< TIM16 DMA address for full transfer,         Address offset: 0x4C */
-  __IO uint32_t OR1_1;        /*!< TIM16 option register 1,                     Address offset: 0x50 */
+  __IO uint32_t OR1;          /*!< TIM16 option register 1,                     Address offset: 0x50 */
        uint32_t RESERVED4;    /*!< Reserved,                                    Address offset: 0x54 */
        uint32_t RESERVED5;    /*!< Reserved,                                    Address offset: 0x58 */
        uint32_t RESERVED6;    /*!< Reserved,                                    Address offset: 0x5C */
-  __IO uint32_t OR2_1;        /*!< TIM16 option register 2,                     Address offset: 0x60 */
+  __IO uint32_t OR2;          /*!< TIM16 option register 2,                     Address offset: 0x60 */
 } TIM16_TypeDef;
 
 #define TIM16 ((TIM16_TypeDef *) TIM16_BASE)
